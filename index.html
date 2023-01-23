@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p8_layoutweb</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+            display: grid;       
+            grid-template-columns: repeat (6, 12.5%);
+            grid-template-rows: 12.5% 25% 50% 12.5%;
+        }
+        nav{
+            grid-column: 1/7;
+            background-color: #ff0095;
+        }
+        header{
+            grid-column: 1/7;
+            background-color: thistle;
+        }
+        main{
+            grid-column: 1/6;
+            background-color: #7db8fe;
+        }
+        aside{
+            grid-column: 6/7;
+            background-color: #c2f1db;
+        }
+        footer{
+            grid-column: 1/7;
+            background-color: #fffd97;
+        }
+        /*IPAD*/
+        @media only screen and (max-width: 832px) {
+            .container{
+                grid-template-columns: repeat (4, 25%) ;
+                grid-template-rows: 6.66% 26.64% 33.3% 13.32% 19.98%;
+            }
+            nav, header, main, aside, footer {
+                grid-column: 1/6;
+            }
+        }
+        /*IPHONE 8*/
+        @media only screen and (max-width: 600px) {
+            .container{
+                grid-template-columns: auto auto ;
+                grid-template-rows: 10% 30% 40% 10% 20%;
+            }
+            main{
+                background-color: #0022ff;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <p>menú nav</p>
+        </nav>
+        <header>
+            <p>header</p>
+        </header>
+        <main>
+            <p>main content</p>
+        </main>
+        <aside>
+             <p>aside</p>
+        </aside>
+        <footer>
+            <p>footer</p>
+        </footer>
+    </div>
+</body>
+</html>
